@@ -2,13 +2,13 @@
 /**
  * f_pall - Prints the stack
  * @head: stack head
- * @counter: void
+ * @index: void
  * Return: None
 */
-void f_pall(stack_t **head, unsigned int counter)
+void f_pall(stack_t **head, unsigned int index)
 {
 	stack_t *h;
-	(void)counter;
+	(void)index;
 
 	h = *head;
 	if (h == NULL)

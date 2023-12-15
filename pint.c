@@ -2,14 +2,14 @@
 /**
  * f_pint - Prints the top value of a stack
  * @head: stack head
- * @counter: line_number
+ * @index: line_number
  * Return: None
 */
-void f_pint(stack_t **head, unsigned int counter)
+void f_pint(stack_t **head, unsigned int index)
 {
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%u: can't pint, stack empty\n", counter);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", index);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);

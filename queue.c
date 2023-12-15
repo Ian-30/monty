@@ -2,13 +2,13 @@
 /**
  * f_queue - Prints from the top
  * @head: stack head
- * @counter: line_number
+ * @index: line_number
  * Return: None
 */
-void f_queue(stack_t **head, unsigned int counter)
+void f_queue(stack_t **head, unsigned int index)
 {
 	(void)head;
-	(void)counter;
+	(void)index;
 	bus.lifi = 1;
 }
 

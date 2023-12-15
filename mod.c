@@ -2,10 +2,10 @@
 /**
  * f_mod - Calculates the modulus of the second and first values 
  * @head: stack head
- * @counter: line_number
+ * @index: line_number
  * Return: None
 */
-void f_mod(stack_t **head, unsigned int counter)
+void f_mod(stack_t **head, unsigned int index)
 {
 	stack_t *h;
 	int len = 0, hol;
@@ -18,7 +18,7 @@ void f_mod(stack_t **head, unsigned int counter)
 	}
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't mod, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't mod, stack too short\n", index);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
@@ -27,7 +27,7 @@ void f_mod(stack_t **head, unsigned int counter)
 	h = *head;
 	if (h->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", counter);
+		fprintf(stderr, "L%d: division by zero\n", index);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);

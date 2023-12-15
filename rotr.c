@@ -2,25 +2,25 @@
 /**
   *f_rotr- Rotates a stack to the bottom
   *@head: stack head
-  *@counter: line_number
+  *@index: line_number
   *Return: None
  */
-void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter)
+void f_rotr(stack_t **head, __attribute__((unused)) unsigned int index)
 {
-	stack_t *copy;
+	stack_t *mov;
 
-	copy = *head;
+	mov = *head;
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		return;
 	}
-	while (copy->next)
+	while (mov->next)
 	{
-		copy = copy->next;
+		mov = mov->next;
 	}
-	copy->next = *head;
-	copy->prev->next = NULL;
-	copy->prev = NULL;
-	(*head)->prev = copy;
-	(*head) = copy;
+	mov->next = *head;
+	mov->prev->next = NULL;
+	mov->prev = NULL;
+	(*head)->prev = mov;
+	(*head) = mov;
 }

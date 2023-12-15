@@ -2,10 +2,10 @@
 /**
   *f_sub- Subtracts first two values of a stack
   *@head: stack head
-  *@counter: line_number
+  *@index: line_number
   *Return: None
  */
-void f_sub(stack_t **head, unsigned int counter)
+void f_sub(stack_t **head, unsigned int index)
 {
 	stack_t *hol;
 	int ace, nodes;
@@ -15,7 +15,7 @@ void f_sub(stack_t **head, unsigned int counter)
 		hol = hol->next;
 	if (nodes < 2)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", index);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
