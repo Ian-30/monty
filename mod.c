@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * f_mod - Calculates the modulus of the second and first values 
+ * f_mod - Calculates the modulus of the second and first values
  * @head: stack head
  * @index: line_number
  * Return: None
